@@ -1,0 +1,176 @@
+/* opacity animation */
+
+@-webkit-keyframes opacity_change {
+    0%,
+    10%,
+    70%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes opacity_change {
+    0%,
+    10%,
+    70%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes opacity_change {
+    0%,
+    10%,
+    70%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes opacity_change {
+    0%,
+    10%,
+    70%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes opacity_change {
+    0%,
+    10%,
+    70%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
+/*loading animation*/
+
+@keyframes load {
+    0% {
+        border-radius: 40px;
+        background-color: #ccffcc;
+        width: 0px;
+        opacity: 0;
+    }
+    25% {
+        border-radius: 5px;
+        width: 100vw;
+        margin-left: 0;
+        opacity: 0.8;
+    }
+    50% {
+        background-color: #424242;
+        border-radius: 0px;
+        width: 100vw;
+        margin-left: 0;
+        opacity: 1;
+    }
+    75% {
+        border-radius: 5px;
+        width: 0vw;
+        margin-left: 100vw;
+        opacity: 0.8;
+    }
+    100% {
+        border-radius: 40px;
+        background-color: #ccffcc;
+        margin-left: 100vw;
+        width: 0px;
+        opacity: 0;
+    }
+}
+
+
+/*shake animation*/
+
+@keyframes shake {
+    15% {
+        -webkit-transform: scale(1, 0.5);
+    }
+    30% {
+        -webkit-transform: rotate(-2deg);
+        -moz-transform: rotate(-2deg);
+        -ms-transform: rotate(-2deg);
+        -o-transform: rotate(-2deg);
+        transform: rotate(-2deg);
+    }
+    70% {
+        -webkit-transform: rotate(2deg);
+        -moz-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+        -o-transform: rotate(2deg);
+        transform: rotate(2deg);
+    }
+    80% {
+        -webkit-transform: rotate(-2deg);
+        -moz-transform: rotate(-2deg);
+        -ms-transform: rotate(-2deg);
+        -o-transform: rotate(-2deg);
+        transform: rotate(-2deg);
+    }
+    90% {
+        -webkit-transform: rotate(2deg);
+        -moz-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+        -o-transform: rotate(2deg);
+        transform: rotate(2deg);
+    }
+}
+
+
+.shake-zoom-animation {
+    -webkit- animation: shake 3s cubic-bezier(.36, .07, .19, .97) infinite both;
+    -moz- animation: shake 3s cubic-bezier(.36, .07, .19, .97) infinite both;
+    -o- animation: shake 3s cubic-bezier(.36, .07, .19, .97) infinite both;
+    -ms- animation: shake 3s cubic-bezier(.36, .07, .19, .97) infinite both;
+    animation: shake 3s cubic-bezier(.36, .07, .19, .97) infinite both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+}
+
+.cubicBezier {
+    -webkit-transition: 0.5s cubic-bezier(.91, .8, .59, 1.21);
+    -moz-transition: 0.5s cubic-bezier(.91, .8, .59, 1.21);
+    -ms-transition: 0.5s cubic-bezier(.91, .8, .59, 1.21);
+    -o-transition: 0.5s cubic-bezier(.91, .8, .59, 1.21);
+    transition: 0.5s cubic-bezier(.91, .8, .59, 1.21);
+}
+
+.loading-animation {
+    -webkit-animation: load 10s infinite alternate both;
+    -moz-animation: load 10s infinite alternate both;
+    -o-animation: load 10s infinite alternate both;
+    -ms-animation: load 10s infinite alternate both;
+    animation: load 10s infinite alternate initial;
+    position: absolute;
+    height: 2px;
+}
+
+.change-opacity {
+    -webkit-animation: opacity_change 10s infinite alternate;
+    -moz-animation: opacity_change 10s infinite alternate;
+    -o-animation: opacity_change 10s infinite alternate;
+    -ms-animation: opacity_change 10s infinite alternate;
+    animation: opacity_change 10s infinite alternate;
+}
+
+
+/*carousel*/
